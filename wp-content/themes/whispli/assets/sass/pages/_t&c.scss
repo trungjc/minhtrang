@@ -1,0 +1,73 @@
+.privacy-page,.full-terms-page,.informant-terms-page,.tc-page {
+    .content-page {
+        font-size: 14px;
+        line-height: 124%;  
+         padding-top: 10px;
+       font-family: 'Montserrat Regular';
+        h1 {
+            font-size: 22px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: $font-default-bold;
+            margin: 15px 0;
+            span:first-child {
+                margin-right: 26px;
+                margin-right: 20px;
+                display: inline-block;
+                min-width: 20px;
+            }
+        }
+        strong,
+        b {
+            font-family: $font-default-bold;
+        }
+        ul {
+            padding: 0;
+            margin: 15px 0;
+            list-style: outside none none;
+            span:first-child {
+                margin-right: 20px;
+                margin-right: 20px;
+                display: inline-block;
+                min-width: 20px;
+            }
+        }
+        p {
+            margin: 15px 0;
+            span:first-child {
+                margin-right: 20px;
+                margin-right: 20px;
+                display: inline-block;
+                min-width: 20px;
+            }
+        }
+    }
+    .hero-image {
+        min-height: 218px;
+    }
+    .hero-banner {
+        h2 {
+            font-family: $font-heading;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .privacy-page {
+        .hero-banner {
+            .heading {
+                font-size: 22px;
+            }
+        }
+    }
+}

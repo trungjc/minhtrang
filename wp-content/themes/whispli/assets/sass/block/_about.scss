@@ -1,0 +1,195 @@
+//=================who-are-we=========//
+.who-are-we {
+    text-align: center;
+    padding: 26px 0 14px;
+    margin-bottom: 10px;
+    @include desktop {
+        padding: 46px 0 14px;
+        margin-bottom: 40px;
+    }
+    .title {
+        font-size: 14px;
+        margin-bottom: 12px;
+        .job-title {
+            display: block;
+        }
+        h5 {
+            margin: 0 0 4px;
+        }
+    }
+    p,
+    .job-title {
+        font-size: $font-size-base + 2;
+    }
+    p {
+        line-height: 18px;
+        margin: 0 auto 20px;
+        @include tablet {
+            max-width: 252px;
+        }
+    }
+    .avatar {
+        @include square(140px);
+        margin: 15px auto 30px;
+        overflow: hidden;
+        @include tablet {
+            margin: 27px auto 34px;
+        }
+        position: relative;
+        border-radius: 50%;
+        background: #304c8d;
+        img {
+            @include opacity(0.6);
+            @include square(140px);
+            border-radius: 50%;
+        }
+    }
+}
+
+//=====================below-hero============// 
+.below-hero {
+    text-align: center;
+    .img-heading {
+        margin-top: 0px;
+        @include tablet {
+            margin-top: -70px;
+        }
+        img {
+            border-radius: 50%;
+        }
+    }
+    .container {
+        @include tablet {
+            @include display-flex;
+        }
+    }
+    .panel {
+        @include box-shadow(none);
+        border: 1px solid $hr-border;
+        position: relative;
+        z-index: 9;
+        margin: -1px 0px;
+        @include mobile {
+            &:first-child {
+                margin-top: 10px;
+            }
+        }
+        min-height: 300px;
+        @include tablet {
+            width: 33.3333%;
+            margin: 0px -1px;
+            float: left;
+        }
+        h5 {
+            margin: 20px 0;
+        }
+        p {
+            line-height: 18px;
+            font-size: $font-size-base + 2;
+        }
+    }
+}
+
+//======================one-platform===============
+.one-platform {
+    padding: 36px 0;
+    @include tablet {
+        padding: 66px 0;
+    }
+    h2 {
+        margin: 0 0 22px;
+    }
+    p {
+        line-height: 18px;
+        font-size: $font-size-base + 2;
+        max-width: 652px;
+        margin: 0 auto 10px;
+    }
+}
+//===================what-will=====================//
+.what-will {
+    .hero-image {
+        max-height: 528px;
+        overflow: hidden;
+        @include mobile {
+            /* min-height: 580px;
+            .visible-xs-block {
+                min-height: 580px;
+            } */
+        }
+        .parallax-img {
+            @include opacity(0.5);
+        }
+    }
+    .container {
+        max-width: 826px;
+    }
+    .hero-caption {
+        text-align: left;
+        p {
+            width: auto;
+        }
+        h3 {
+            margin: 0 0 30px;
+        }
+        @include mobile {
+            h3,
+            p {
+                margin: 0 0 15px;
+            }
+            .list-items {
+                margin-top: 50px;
+                .item {
+                    margin-top: 22px;
+                    p {
+                        margin-bottom: 0!important;
+                    }
+                }
+            }
+        }
+    }
+    @include desktop {
+        .list-items {
+            padding: 0 0 0 20px;
+        }
+    }
+    .blue-overlay img,
+    .blue-overlay .visible-xs-block {
+        @include opacity(0.5);
+    }
+}
+
+.about {
+    .hero-banner {
+        .purple-overlay img,
+        .purple-overlay .visible-xs-block,
+        .blue-overlay img,
+        .blue-overlay .visible-xs-block {
+            @include opacity(0.5);
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .who-are-we {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about {
+        p,
+        .who-are-we p,
+        .who-are-we .job-title,
+        .one-platform p,
+        .below-hero .panel p {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .who-are-we {
+        margin-bottom: 5px;
+    }
+}

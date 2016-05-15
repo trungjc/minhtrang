@@ -1,0 +1,38 @@
+.header {
+    .navbar-nav {
+          @include transition(all 0.3s ease-in-out 0s);
+        li {
+            a {
+                font-family: $font-default-bold;
+                color: $navbar-inverse-color;
+               // font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                @include transition(all 0.3s ease-in-out 0s);
+            }
+        }
+    }
+    & + * {
+        margin-top: 65px;
+
+        @include desktop {
+            margin-top: 140px;
+        }
+         @media (min-width: 768px) and (max-width: 1024px)  {
+            margin-top: 110px;
+        }
+    }
+    
+}
+
+.logo {
+    margin: 0;
+    @include opacity(1);
+    @include transition(all 0.3s linear 0s);
+    max-width: 60%;
+    @include tablet {
+        //left: -40px;
+        max-width: 100%;
+       // position: relative;
+    }
+}

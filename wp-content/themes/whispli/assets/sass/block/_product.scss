@@ -1,0 +1,388 @@
+
+// ================section secondary menu================
+.secondary-menu {
+    .navbar-nav {
+        li a {
+            color: $text-color;
+            font-family: $font-default-bold;
+            text-transform: uppercase;
+            padding: 31px 33px;
+            letter-spacing: 2px;
+        }
+    }
+    .pull-right {
+        margin: 0 20px 0 20px;
+        li a {
+            padding: 32px 12px;
+            line-height: 11px;
+            &:hover {
+                background: none;
+                [class^="icon-"],
+                [class*=" icon-"] {
+                    color: #8e9498;
+                }
+            }
+            [class^="icon-"],
+            [class*=" icon-"] {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+//================first-statement======================//
+.hero-statement {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 26px 0;
+    @include tablet {
+        font-size: $font-size-base + 2;
+        padding: 60px 0;
+    }
+    color: white;
+    font-family: $font-heading;
+    line-height: 22px;
+    background: $text-color url('../img/bg-ft-product.png') no-repeat center center;
+    ul {
+        padding: 0;
+        li {
+            display: inline-block;
+            padding: 0px 25px;
+            a {
+                color: white;
+            }
+            @include mobile {
+                padding: 0px 5px;
+            }
+            list-style: none;
+        }
+    }
+}
+
+//================.beyond-fraud======================//
+.beyond-fraud {
+    position: relative;
+    top: -45px;
+    margin-bottom: -45px;
+    overflow: hidden;
+    .hero-image {
+        max-height: 610px;
+        @media(max-width: 1400px) {
+            max-height: 470px;
+        }
+        overflow: hidden;
+        @include mobile {
+            max-height: 338px; 
+        }
+    }
+}
+
+//================.how-it-work======================//
+.how-it-work {
+    position: relative;
+    z-index: 9;
+    .heading {
+        text-align: center;
+        margin: 30px 0;
+        font-size: 20px;
+        @include tablet {
+            margin: 55px 0;
+            font-size: 24px;
+        }
+        text-transform: uppercase;
+    }
+    .media {
+        h3 {
+            font-size: $font-size-base + 2;
+            margin-bottom: 14px;
+            line-height: 18px;
+            min-height: 38px;
+            span {
+                display: block;
+                font-family: $font-default-bold;
+            }
+            text-transform: uppercase;
+        }
+        .media-left {
+            padding-right: 44px;
+            vertical-align: middle;
+            position: relative;
+            img {
+                max-width: none;
+            }
+        }
+        p {
+            line-height: 16px;
+        }
+    }
+    .container {
+        .row {
+            margin-left: -3px;
+            margin-right: -3px;
+            .col-md-6 {
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+        }
+    }
+    .panel {
+        margin-bottom: 6px;
+        @include box-shadow(none);
+        .panel-body {
+            padding: 20px 44px;
+            min-height: 182px;
+        }
+    }
+}
+
+.testimonial {
+    margin-bottom: 58px;
+    font-size: $font-size-base + 2;
+    .quote {
+        text-transform: uppercase;
+        font-family: $font-heading;
+        max-width: 790px;
+        line-height: 18px;
+        margin: 0 auto 14px;
+    }
+    .name {}
+}
+
+.final-statement {
+    padding: 60px 0;
+    h5 {
+        margin: 0 0 30px 0;
+    }
+    .btn {
+        @include tablet {
+            min-width: 300px;
+        }
+    }
+}
+
+.fraud-costs {
+    .hero-banner .hero-image {
+        max-height: 353px;
+        @include mobile {
+            max-height: 310px;
+        }
+        overflow: hidden;
+    }
+    h3 {
+        @include desktop {
+            margin: 0 0 30px;
+            padding-top: 90px;
+            //font-size: 20px;
+            // padding-top: 40px;
+        }
+        @include tablet-only {
+            padding-top: 40px;
+            font-size: 20px;
+        }
+    }
+}
+
+.product .bottom-brand-widget {
+    padding-top: 70px;
+}
+
+///=================pricing======================
+.pricing {
+    padding: 52px 0 100px;
+    @include mobile {
+        padding: 25px 0 80px;
+    }
+    .price-list {
+        padding: 0;
+        margin-bottom: 30px
+    }
+    li {
+        list-style: none;
+        padding: 14px 15px 12px 10px;
+        line-height: 18px;
+        font-size: $font-size-base + 2;
+        @include mobile {
+            font-size: $font-size-base;
+        }
+        border-bottom: 1px solid #051e2f;
+    }
+    h2 {
+        margin: 0 0 10px;
+        font-size: 30px;
+        text-transform: uppercase;
+        @include mobile {
+            font-size: 22px;
+        }
+    }
+    .price-heading {
+        margin-bottom: 45px;
+        @include mobile {
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 16px;
+            @include mobile {
+                font-size: $font-size-base;
+            }
+        }
+        a {
+            font-family: $font-default-bold;
+            color: #1a8ece;
+        }
+    }
+    .box-heading {
+        text-align: center;
+        border: 1px solid $hr-border;
+        background: white;
+        padding: 32px 25px 20px;
+        .price {
+            font-size: 60px;
+            line-height: 100%;
+            @include mobile {
+                font-size: 45px;
+            }
+            font-family: $font-heading;
+        }
+        .currency,
+        .title {
+            font-size: $font-size-base + 2;
+            line-height: 100%;
+            @include mobile {
+                font-size: $font-size-base;
+            }
+            font-family: $font-heading;
+        }
+        .description {
+            font-size: $font-size-base + 2;
+            @include mobile {
+                font-size: $font-size-base;
+            }
+            line-height: 20px;
+        }
+    }
+    .price-inner {
+        // max-width: 900px;
+        margin: 0 auto;
+        display: table;
+        clear: both;
+        @include mobile {
+            display: block;
+        }
+        .pricing-column {
+            display: table-cell;
+            padding: 0 10px;
+            width: 400px;
+            @include mobile {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    .price-1-column {
+        @include tablet-only {
+            display: block;
+        }
+        .pricing-column {
+            width: 480px;
+            @include tablet-only {
+                display: block;
+                width: 100%;
+            }
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+    .price-3-column {
+        @include tablet-only {
+            display: block;
+        }
+        .pricing-column {
+            width: 320px;
+            @include tablet-only {
+                display: block;
+                float: left;
+                width: 248px;
+            }
+            @include mobile {
+                width: 100%;
+            }
+        }
+        .box-heading {
+            padding: 32px 0 20px;
+            .price {
+                @include tablet-only {
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+    .value {
+        color: #1b8fce;
+        font-family: $font-default-bold;
+        font-size: $font-size-base;
+    }
+    .icon-cross {
+        color: $text-color;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 16px;
+        @include mobile {
+            padding: 8px 10px;
+        }
+    }
+    .price-box {
+        margin-bottom: 18px;
+        padding-top: 10px;
+        @include mobile {
+            margin-bottom: 10px;
+        }
+    }
+    .pricing-column {
+        &.highlight {
+            .btn {
+                background: #1a8ece;
+                border-color: #1a8ece;
+                &:hover {
+                    background: #00517c;
+                    border-color: #00517c;
+                }
+            }
+            .box-heading {
+                text-align: center;
+                border: 1px solid #00517c;
+                background: #00517c;
+                * {
+                    color: white;
+                }
+            }
+        }
+    }
+    .pricing-footer {
+        line-height: 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 799px) {
+    .product {
+        .hero-section + .footer {
+            margin-top: 220px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .fraud-costs {
+        .hero-banner h3 {
+            font-size: 16px;
+            padding-top: 20px;
+        }
+    }
+    .hero-banner {
+        .heading-img {
+            max-width: 100px;
+        }
+    }
+}

@@ -1,0 +1,172 @@
+@import "../font/font-awesome.css";
+.mr0 {
+    margin-right: 0;
+}
+.tmInput input {
+    background: #fff none repeat scroll 0 0;
+    border: medium none;
+    box-sizing: border-box;
+    color: #686868;
+    float: left;
+    font: 12px/20px "Roboto",sans-serif;
+    height: 35px;
+    margin-bottom: 5px;
+    padding: 7px 12px 8px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.tmSelect {
+    margin-bottom: 0 !important;
+}
+#bookingForm {
+    display: block;
+    position: relative;
+}
+#bookingForm a.btn {
+    display: block;
+    font-size: 18px;
+    margin-top: 15px;
+    padding-bottom: 13px;
+    padding-top: 12px;
+}
+.controlHolder {
+    margin-bottom: 5px;
+    position: relative;
+}
+.error-message {
+    background-color: #fff;
+    bottom: 0;
+    color: #fe5353;
+    display: block;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 14px;
+    position: absolute;
+    right: 5px;
+    text-align: right;
+    top: 5px;
+    z-index: 4;
+}
+.success-message {
+    color: #282828;
+    margin: 5px 0;
+    position: relative !important;
+    text-align: left;
+}
+.tmSelect, .tmSelect2 {
+    clear: both;
+    margin: 0;
+    width: 100%;
+}
+.tmSelect li, .tmSelect2 li {
+    list-style: outside none none;
+    position: relative;
+}
+.tmSelect span, .tmSelect2 span, .tmSelect input[type="text"], .tmSelect2 input[type="text"] {
+    cursor: pointer;
+    display: block;
+    left: 0;
+    margin: 0;
+    position: relative;
+    top: 0;
+}
+.tmSelect, .tmSelect2 {
+    background-color: #fff;
+    box-sizing: border-box;
+    color: #686868;
+    cursor: pointer;
+    font: 12px/20px "Roboto",sans-serif;
+    height: 35px;
+    padding: 0;
+    width: 100%;
+}
+.tmSelect.auto span, .tmSelect2.auto span {
+    background: transparent none repeat scroll 0 0;
+}
+.tmSelect.auto ul, .tmSelect2.auto ul {
+    box-sizing: border-box;
+    float: right;
+    margin: 0;
+    width: 100%;
+}
+.tmSelect.auto > li:first-child > span, .tmSelect2.auto > li:first-child > span {
+    box-sizing: border-box;
+    color: #737272;
+    padding: 7px 12px 8px;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+.tmSelect ul, .tmSelect2 ul, .tmSelect .transformSelectDropdown, .tmSelect2 .transformSelectDropdown {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #737272;
+    font: 12px/18px Arial,sans-serif;
+    margin: 0;
+    max-height: 210px;
+    min-height: 65px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    width: 100%;
+    z-index: 999;
+}
+.tmSelect ul:focus, .tmSelect2 ul:focus, .tmSelect .transformSelectDropdown:focus, .tmSelect2 .transformSelectDropdown:focus {
+    background: #fff none repeat scroll 0 0;
+}
+.tmSelect ul span, .tmSelect2 ul span, .tmSelect .transformSelectDropdown span, .tmSelect2 .transformSelectDropdown span {
+    border: 0 none;
+    color: #000;
+    line-height: 17px;
+    padding: 4px 9px;
+    text-transform: uppercase;
+}
+.tmSelect ul span:hover, .tmSelect2 ul span:hover, .tmSelect .transformSelectDropdown span:hover, .tmSelect2 .transformSelectDropdown span:hover {
+    background: #d2dae0 none repeat scroll 0 0;
+}
+.tmSelect ul li input[type="checkbox"], .tmSelect2 ul li input[type="checkbox"] {
+    cursor: pointer;
+    margin: 0 5px 0 0;
+    position: relative;
+    top: 2px;
+}
+.tmSelect2::after {
+    background: #686868 none repeat scroll 0 0 !important;
+    color: #fde758;
+    content: "";
+    display: block !important;
+    font-family: "FontAwesome";
+    font-size: 18px;
+    height: 27px;
+    line-height: 18px;
+    position: absolute;
+    right: 4px;
+    text-align: center;
+    top: 4px;
+    width: 27px;
+}
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.clearfix::after {
+    clear: both;
+}
+.hide-text {
+    background-color: transparent;
+    border: 0 none;
+    color: transparent;
+    font: 0px/0 a;
+    text-shadow: none;
+}
+#bookingForm em {
+    color: #282828;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
