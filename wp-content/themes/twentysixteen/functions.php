@@ -638,6 +638,7 @@ function mt_scripts() {
 
 	wp_enqueue_script( 'mt-jquery', get_template_directory_uri() . '/assets/js/jquery-1.11.2.min.js', array(), $version, true );
 	wp_enqueue_script( 'mt-slick', get_template_directory_uri() . '/assets/js/slick.min.js', array(), $version, true );
+wp_enqueue_script( 'mt-equalheight', get_template_directory_uri() . '/assets/js/jquery.matchHeight-min.js', array(), $version, true );
 
 
 	wp_register_script( 'mt-main', get_template_directory_uri() . '/assets/js/main.js', array(), $version, true );
@@ -670,3 +671,54 @@ add_filter( 'pre_get_posts', 'my_get_posts' );
 
 		return $query;
 		}
+
+
+// Related Posts Function, matches posts by tags - call using joints_related_posts(); )
+function joints_related_posts() {
+    global $post;
+    $tags = wp_get_post_tags( $post->ID );
+
+    if($tags) {
+        foreach( $tags as $tag ) {
+            $tag_arr .= $tag->slug . ',';
+        }
+
+        $args = array(
+        	'post_type' => 'product',
+            'tag' => $tag_arr,
+            'numberposts' => 6, /* You can change this to show more */
+            'post__not_in' => array($post->ID)
+        );
+        $related_posts = get_posts( $args );
+        
+        if($related_posts) {
+        echo '<h4 style="border-top: 3px solid #686868;">CÁC BÀI VIẾT LIÊN QUAN</h4>';
+        echo '<div class="joints-related-posts related_posts row">';
+            foreach ( $related_posts as $post ) : setup_postdata( $post );  $acf_fields_product = get_fields(); ?>
+                   
+                     <div class="grid_3" style="margin-top:15px;margin-bottom: 15px;">
+	                                    <div class="block1">
+											<?php if ( has_post_thumbnail() ) { ?>
+											<div class="feature-image"><a href="<?php the_permalink(); ?>">
+												<?php $product_thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ) ;
+
+												?>
+												<img src="<?php echo whispli_resize_image($product_thumbnail_src[0]); ?>" alt=""></a>
+											</div>
+											<?php } else {?>
+											<div class="feature-image">
+												<img src="<?php echo get_template_directory_uri()?>/assets/img/blog_placeholder.png" alt="">
+												
+											</div>
+											<?php } ?>
+	                                         <div class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+	                                          <div class="brief"> <?php the_excerpt () ?></div>
+	                                        <div class="price"><?php echo $acf_fields_product['gia'] ?><span><?php echo $acf_fields_product['khuyenmai'] ?></span></div>
+	                                        <a href="<?php the_permalink(); ?>" class="btn" >chi tiết</a>
+	                                    </div>
+	                                </div>
+            <?php endforeach; }
+            }
+    wp_reset_postdata();
+    echo '</div>';
+}

@@ -26,6 +26,7 @@
             <header class="header">
                 <div class="container">
                     <div class="row">
+                    <div class="top-bar">
                         <div class="grid_12">
                             <div class="h_top">
                                 <div class="socials"><a href="<?php echo get_option('twitter_link')?>"  class="fa fa-twitter col1"></a>
@@ -45,6 +46,8 @@
                                  <div class="number"><span>Hotline: </span> <?php echo get_option('hotline')?> </div>
                             </div>
                         </div>
+                        </div>
+                        <div class="middle-bar">
                         <div class="grid_2">
                           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.jpg"/></a>
                         </div>
@@ -60,6 +63,7 @@
                                 ?>
                             </nav><!-- .main-navigation -->
                         <?php endif; ?>
+                        </div>
                         </div>
                         <div class="grid_12">
                              <div class="mb-menu">

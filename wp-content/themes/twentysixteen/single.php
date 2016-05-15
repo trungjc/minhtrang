@@ -41,7 +41,7 @@ get_header(); ?>
 						'<span class="post-title">%title</span>',
 				) );
 			}
-
+ joints_related_posts(); 
 			// End of the loop.
 		endwhile;
 		?>

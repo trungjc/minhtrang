@@ -16,7 +16,6 @@ jQuery(document).ready(function() {
         autoplay: true,
         autoplaySpeed: 10000,
         arrows: false,
-        pauseOnFocus: false,
         speed: 500,
     });
     jQuery('.ico-menu').click(function() {
@@ -41,7 +40,15 @@ jQuery(document).ready(function() {
         slidesToShow: 5,
         slidesToScroll: 3
     });
+     jQuery('.list-product  .grid_3').matchHeight();
 });
 jQuery(window).load(function() {
 
+});
+$(window).scroll(function(){
+  var sticky = $('.middle-bar'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 100) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
 });

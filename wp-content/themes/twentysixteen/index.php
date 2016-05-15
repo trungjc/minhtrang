@@ -101,11 +101,11 @@ get_header(); ?>
 	                                <div class="grid_3">
 	                                    <div class="block1">
 											<?php if ( has_post_thumbnail() ) { ?>
-											<div class="feature-image">
+											<div class="feature-image"><a href="<?php the_permalink(); ?>">
 												<?php $product_thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ) ;
 
 												?>
-												<img src="<?php echo whispli_resize_image($product_thumbnail_src[0]); ?>" alt="">
+												<img src="<?php echo whispli_resize_image($product_thumbnail_src[0]); ?>" alt=""></a>
 											</div>
 											<?php } else {?>
 											<div class="feature-image">
